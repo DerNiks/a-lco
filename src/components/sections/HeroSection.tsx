@@ -3,28 +3,36 @@ import Image from "next/image";
 
 export const HeroSection = () => {
   return (
-    <section className="relative w-full min-h-[90vh] flex flex-col items-center justify-center bg-gradient-to-b from-white via-white to-[#fff5eb] px-6 pt-20">
-      <div className="container mx-auto flex flex-col items-center z-10">
-        {/* Tagline Utama */}
-        <h1 className="text-center font-serif text-7xl md:text-9xl text-brand-blue leading-[0.9] mb-6">
-          A boutique Law Firm for <br />
-          <span className="italic text-brand-orange">Your Needs.</span>
-        </h1>
+    <section className="relative w-full min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden">
+      {/* Background Gradient/Slice Simulation */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-[#fff5eb] -z-20" />
 
-        {/* Subtitle */}
-        <p className="text-center font-sans text-brand-blue/80 text-xl max-w-2xl mb-10">
-          We work collaboratively for our trusted clients to achieve their goals
-          with integrity and professional excellence.
-        </p>
+      <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-10">
+        {/* Text Content */}
+        <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left z-10">
+          <h1 className="font-serif text-6xl md:text-8xl lg:text-[100px] leading-[0.9] text-[#102a3b] mb-6">
+            <span className="text-[#f4690c] block mb-2 text-4xl md:text-5xl lg:text-6xl font-sans font-medium tracking-widest uppercase">
+              A Boutique Law Firm For
+            </span>
+            Your Needs.
+          </h1>
 
-        {/* Gambar Justitia (Pastikan file ada di public/justitia_bunga.png) */}
-        <div className="relative w-[300px] h-[400px] md:w-[400px] md:h-[500px]">
+          <p className="font-sans text-[#102a3b] text-lg md:text-xl leading-relaxed max-w-2xl font-medium mt-8">
+            Our law firm, Antoni Yeo & Partners (A-LCO), is established to
+            assist corporations and resolve legal issues. Specializing in
+            business, corporate laws, bankruptcy, criminal law, and more.
+          </p>
+        </div>
+
+        {/* Image Content */}
+        <div className="flex-1 relative w-full max-w-[600px] h-[600px] lg:h-[800px]">
+          {/* Lady Justice Image */}
           <Image
-            src="/justitia_bunga.png"
-            alt="Justitia Statue"
+            src="/justitia_bunga.png" // Pastikan file ini ada di public
+            alt="Lady Justice"
             fill
+            className="object-contain object-center"
             priority
-            className="object-contain"
           />
         </div>
       </div>

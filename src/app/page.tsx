@@ -1,28 +1,31 @@
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ValuesSection } from "@/components/sections/ValuesSection";
 import { LawServicesSection } from "@/components/sections/LawServicesSection";
 import { TeamSection } from "@/components/sections/TeamSection";
-import { ClientsSection } from "@/components/sections/ClientsSection"; // (Dari respons sebelumnya)
-import { QualitySection } from "@/components/sections/QualitySection"; // (Dari respons sebelumnya)
+import { ClientsSection } from "@/components/sections/ClientsSection";
+import { QualitySection } from "@/components/sections/QualitySection";
 import { FAQSection } from "@/components/sections/FAQSection";
-import { ContactSection } from "@/components/sections/ContactSection"; // (Dari respons sebelumnya)
+import { ContactSection } from "@/components/sections/ContactSection";
 
 export default function Home() {
   return (
-    <main className="flex flex-col w-full items-center overflow-x-hidden bg-white">
-      <HeroSection />
+    <div className="flex flex-col w-full min-h-screen bg-white">
+      <Navbar />
 
-      {/* Wrapper Gradient untuk Values */}
-      <div className="w-full bg-gradient-to-b from-[#ffbd80] to-[#f4690c] pt-10 pb-24 rounded-t-[3rem] -mt-10 z-20">
+      <main className="flex-grow">
+        <HeroSection />
         <ValuesSection />
-      </div>
+        <LawServicesSection />
+        <TeamSection />
+        <ClientsSection />
+        <QualitySection />
+        <FAQSection />
+        <ContactSection />
+      </main>
 
-      <LawServicesSection />
-      <TeamSection />
-      <ClientsSection />
-      <QualitySection />
-      <FAQSection />
-      <ContactSection />
-    </main>
+      <Footer />
+    </div>
   );
 }
