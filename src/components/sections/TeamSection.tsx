@@ -8,24 +8,23 @@ const teamMembers = [
   {
     name: "Antoni Yeo",
     role: "Founder & President",
-    image: "/elips.png",
+    image: "/anthony.jpg",
     bg: "bg-[#f4690c]",
-  }, // Ganti image path
-  {
-    name: "John Doe",
-    role: "Senior Partner",
-    image: "/elips.png",
-    bg: "bg-[#102a3b]",
   },
-  // Tambah member lain
+  {
+    name: "Deddy Febryanto Tjhang",
+    role: "Senior Partner",
+    image: "/dedy.jpg",
+    bg: "bg-[#f4690c]",
+  },
 ];
 
 export const TeamSection = () => {
   return (
     <section id="our-team" className="w-full py-24 px-6 bg-[#fff5eb] scroll-mt-24">
       <div className="container mx-auto">
-        <h2 className="text-center font-serif text-6xl md:text-8xl text-[#102a3b] mb-16">
-          our <span className="italic text-[#f4690c]">Team</span>
+        <h2 className="text-center font-serif text-6xl md:text-9xl text-[#102a3b] mb-16">
+          our <span className="italic text-[#f4690c] text-[180px]">Team</span>
         </h2>
 
         <div className="flex flex-wrap justify-center gap-10">
@@ -54,12 +53,6 @@ export const TeamSection = () => {
                     <h3 className="font-serif text-3xl">{member.name}</h3>
                     <p className="font-sans opacity-90">{member.role}</p>
                   </div>
-                  <Button
-                    size="icon"
-                    className="rounded-full bg-white text-[#102a3b] hover:bg-gray-200"
-                  >
-                    <ArrowRight className="w-5 h-5" />
-                  </Button>
                 </div>
               </div>
             </div>

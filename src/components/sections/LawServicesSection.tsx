@@ -13,10 +13,16 @@ const expertiseData = [
 
 export const LawServicesSection = () => {
   return (
-    <section id="practice-area" className="w-full py-24 px-6 bg-white scroll-mt-24">
+    <section
+      id="practice-area"
+      className="w-full py-24 px-6 bg-transparent relative z-30 scroll-mt-24"
+    >
       <div className="container mx-auto flex flex-col items-center">
-        <h2 className="text-center font-serif text-6xl md:text-8xl text-[#102a3b] mb-20 leading-tight">
-          Our <span className="text-[#f4690c] italic">Fields of Expertise</span>
+        <h2 className="w-full flex flex-row items-baseline justify-center gap-6 font-serif text-[#102a3b] mb-20 leading-none whitespace-nowrap">
+          <span className="text-[128px]">Our</span>
+          <span className="text-[#f4690c] italic text-[180px]">
+            Fields of Expertise
+          </span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl">
@@ -30,13 +36,7 @@ export const LawServicesSection = () => {
                   <h3 className="font-serif text-[#102a3b] text-4xl leading-tight group-hover:text-[#f4690c] transition-colors">
                     {title}
                   </h3>
-                  <div className="w-12 h-12 rounded-full bg-gray-50 group-hover:bg-[#f4690c] flex items-center justify-center transition-colors">
-                    <ArrowUpRight className="w-6 h-6 text-[#102a3b] group-hover:text-white" />
-                  </div>
                 </div>
-                <p className="font-sans text-gray-500 text-lg">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
               </CardContent>
             </Card>
           ))}

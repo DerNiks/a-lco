@@ -98,7 +98,7 @@ export const QualitySection = () => {
           src="/bg_highest.png"
           alt="Background Pattern"
           fill
-          className="object-cover object-center opacity-100" // Naikkan opacity sedikit agar lebih terlihat
+          className="object-cover object-center" // Naikkan opacity sedikit agar lebih terlihat
           priority
         />
         {/* Overlay putih transparan agar teks tetap kontras */}
