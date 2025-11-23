@@ -3,35 +3,43 @@ import Image from "next/image";
 
 export const HeroSection = () => {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden">
-      {/* Background Gradient/Slice Simulation */}
-      <div className="absolute inset-0 bg-linear-to-b from-white via-white to-[#fff5eb] -z-20" />
+    <section className="relative w-full min-h-screen flex items-center pt-48 lg:pt-85 pb-20 overflow-hidden bg-[#fff5eb]/30">
+      {/* Background Gradient Halus */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-[#f4690c]/5 -z-20" />
 
-      <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-10">
-        {/* Text Content */}
-        <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left z-10">
-          <h1 className="font-serif text-6xl md:text-8xl lg:text-[100px] leading-[0.9] text-[#102a3b] mb-6">
-            <span className="text-[#f4690c] block mb-2 text-4xl md:text-5xl lg:text-6xl font-sans font-medium tracking-widest uppercase">
+      <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center h-full relative">
+        {/* --- TEXT CONTENT --- */}
+        <div className="flex-1 z-20 flex flex-col items-center lg:items-start text-center lg:text-left mt-10 lg:mt-0">
+          <h1 className="leading-[0.9] mb-8">
+            {/* Baris 1: Font Serif, Orange, Normal */}
+            <span className="block font-serif text-[#f4690c] text-5xl md:text-7xl lg:text-[90px] font-normal tracking-wide mb-2">
               A Boutique Law Firm For
             </span>
-            Your Needs.
+
+            {/* Baris 2: Font Serif, Dark Blue, Italic */}
+            <span className="block font-serif text-[#102a3b] text-6xl md:text-8xl lg:text-[120px] italic">
+              Your Needs.
+            </span>
           </h1>
 
-          <p className="font-sans text-[#102a3b] text-lg md:text-xl leading-relaxed max-w-2xl font-medium mt-8">
-            Our law firm, Antoni Yeo & Partners (A-LCO), is established to
-            assist corporations and resolve legal issues. Specializing in
-            business, corporate laws, bankruptcy, criminal law, and more.
+          <p className="font-sans text-[#102a3b] text-lg md:text-xl leading-relaxed max-w-xl font-medium mt-4 lg:ml-2 opacity-90">
+            Our law firm, Antoni Yeo & Partners, Law & Consultants Office
+            (popularly known as A-LCO) is a law firm established with the means
+            to assists corporations and resolve legal issues. Specializing in
+            business and corporate laws as well as other areas of law such as:
+            bankruptcy law, criminal law, family law, labor law, tax law,
+            banking & finance, and contract law as our main area of practice.
           </p>
         </div>
 
-        {/* Image Content */}
-        <div className="flex-1 relative w-full max-w-[600px] h-[600px] lg:h-[800px]">
-          {/* Lady Justice Image */}
+        {/* --- IMAGE CONTENT (JUSTITIA) --- */}
+        {/* Posisi tetap dipertahankan sesuai request sebelumnya (Digeser ke kanan -120px) */}
+        <div className="relative w-full h-[600px] mt-12 lg:mt-0 lg:absolute lg:right-[-76px] lg:top-1/2 lg:-translate-y-1/2 lg:h-[900px] lg:w-[800px] z-10 pointer-events-none">
           <Image
-            src="/justitia_bunga.png" // Pastikan file ini ada di public
+            src="/justitia_bunga.png"
             alt="Lady Justice"
             fill
-            className="object-contain object-center"
+            className="object-contain object-center lg:object-right"
             priority
           />
         </div>

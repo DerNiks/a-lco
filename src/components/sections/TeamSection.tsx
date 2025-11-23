@@ -22,7 +22,7 @@ const teamMembers = [
 
 export const TeamSection = () => {
   return (
-    <section className="w-full py-24 px-6 bg-[#fff5eb]">
+    <section id="our-team" className="w-full py-24 px-6 bg-[#fff5eb] scroll-mt-24">
       <div className="container mx-auto">
         <h2 className="text-center font-serif text-6xl md:text-8xl text-[#102a3b] mb-16">
           our <span className="italic text-[#f4690c]">Team</span>

@@ -6,7 +6,7 @@ import React from "react";
 
 export const ContactSection = () => {
   return (
-    <section className="w-full py-24 px-6">
+    <section id="contact-us" className="w-full py-24 px-6 scroll-mt-24">
       <div className="container mx-auto max-w-5xl flex flex-col items-center">
         <h2 className="text-center font-serif text-[#f4690c] text-7xl md:text-9xl mb-16">
           Get in Touch

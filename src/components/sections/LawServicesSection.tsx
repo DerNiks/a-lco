@@ -13,7 +13,7 @@ const expertiseData = [
 
 export const LawServicesSection = () => {
   return (
-    <section className="w-full py-24 px-6 bg-white">
+    <section id="practice-area" className="w-full py-24 px-6 bg-white scroll-mt-24">
       <div className="container mx-auto flex flex-col items-center">
         <h2 className="text-center font-serif text-6xl md:text-8xl text-[#102a3b] mb-20 leading-tight">
           Our <span className="text-[#f4690c] italic">Fields of Expertise</span>
