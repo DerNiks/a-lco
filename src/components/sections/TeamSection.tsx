@@ -33,7 +33,7 @@ export const TeamSection = () => {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="group relative w-[350px] h-[500px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white"
+              className="group relative w-[350px] h-[500px] rounded-4xl overflow-hidden shadow-2xl border-4 border-white"
             >
               {/* Image Background */}
               <div className="absolute inset-0 bg-gray-200">
@@ -66,7 +66,7 @@ export const TeamSection = () => {
           ))}
 
           {/* "See All" Card */}
-          <div className="w-[350px] h-[500px] rounded-[2rem] border-4 border-[#f4690c] bg-white flex flex-col items-center justify-center cursor-pointer hover:bg-[#f4690c]/5 transition-colors shadow-xl">
+          <div className="w-[350px] h-[500px] rounded-4xl border-4 border-[#f4690c] bg-white flex flex-col items-center justify-center cursor-pointer hover:bg-[#f4690c]/5 transition-colors shadow-xl">
             <div className="w-40 h-40 bg-[#f4690c] rounded-full flex items-center justify-center mb-6 text-white">
               <ArrowRight className="w-20 h-20" />
             </div>

@@ -22,7 +22,7 @@ const valuesData = [
 
 export const ValuesSection = () => {
   return (
-    <section className="w-full py-20 bg-gradient-to-b from-[#ffbd80] to-[#f4690c] rounded-t-[50px] -mt-10 relative z-20">
+    <section className="w-full py-20 bg-linear-to-b from-[#ffbd80] to-[#f4690c] rounded-t-[50px] -mt-10 relative z-20">
       <div className="container mx-auto px-6">
         <h2 className="text-center text-white font-serif text-6xl md:text-8xl mb-16">
           Our <span className="italic">Values</span>

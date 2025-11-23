@@ -14,7 +14,7 @@ export default function Home() {
     <div className="flex flex-col w-full min-h-screen bg-white">
       <Navbar />
 
-      <main className="flex-grow">
+      <main className="grow">
         <HeroSection />
         <ValuesSection />
         <LawServicesSection />

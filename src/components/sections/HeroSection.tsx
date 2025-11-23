@@ -5,7 +5,7 @@ export const HeroSection = () => {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden">
       {/* Background Gradient/Slice Simulation */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-[#fff5eb] -z-20" />
+      <div className="absolute inset-0 bg-linear-to-b from-white via-white to-[#fff5eb] -z-20" />
 
       <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-10">
         {/* Text Content */}
