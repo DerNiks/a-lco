@@ -43,7 +43,7 @@ export const ClientsSection = () => {
         {/* Container Utama dengan lebar tak terbatas */}
         <div className="relative w-full overflow-hidden">
           {/* Track yang bergerak: Width fit content */}
-          <div className="flex w-max min-w-full gap-8 animate-scroll-right hover:[animation-play-state:paused]">
+          <div className="flex w-max min-w-full gap-8 animate-scroll-right hover:paused">
             {/* Kita render 2 KALI (Original + Duplicate) agar looping seamless */}
             {[...row1Logos, ...row1Logos].map((logo, i) => (
               <div
@@ -59,13 +59,13 @@ export const ClientsSection = () => {
           </div>
 
           {/* Gradient Overlay untuk efek pudar di kiri kanan (Opsional) */}
-          <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white to-transparent z-10" />
-          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white to-transparent z-10" />
+          <div className="absolute inset-y-0 left-0 w-20 bg-linear-to-r from-white to-transparent z-10" />
+          <div className="absolute inset-y-0 right-0 w-20 bg-linear-to-l from-white to-transparent z-10" />
         </div>
 
         {/* --- BARIS KEDUA: Kanan ke Kiri (Right to Left) --- */}
         <div className="relative w-full overflow-hidden">
-          <div className="flex w-max min-w-full gap-8 animate-scroll-left hover:[animation-play-state:paused]">
+          <div className="flex w-max min-w-full gap-8 animate-scroll-left hover:paused">
             {/* Render 2 KALI juga */}
             {[...row2Logos, ...row2Logos].map((logo, i) => (
               <div
@@ -80,8 +80,8 @@ export const ClientsSection = () => {
           </div>
 
           {/* Gradient Overlay */}
-          <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white to-transparent z-10" />
-          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white to-transparent z-10" />
+          <div className="absolute inset-y-0 left-0 w-20 bg-linear-to-r from-white to-transparent z-10" />
+          <div className="absolute inset-y-0 right-0 w-20 bg-linear-to-l from-white to-transparent z-10" />
         </div>
       </div>
     </section>

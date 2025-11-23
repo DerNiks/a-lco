@@ -5,7 +5,7 @@ export const HeroSection = () => {
   return (
     <section className="relative w-full min-h-screen flex items-center pt-48 lg:pt-85 pb-20 overflow-hidden bg-[#fff5eb]/30">
       {/* Background Gradient Halus */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-[#f4690c]/5 -z-20" />
+      <div className="absolute inset-0 bg-linear-to-br from-white via-white to-[#f4690c]/5 -z-20" />
 
       <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center h-full relative">
         {/* --- TEXT CONTENT --- */}
