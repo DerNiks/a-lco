@@ -29,7 +29,7 @@ export const LawServicesSection = () => {
           {expertiseData.map((title, index) => (
             <Card
               key={index}
-              className="bg-white border-2 border-gray-100 hover:border-[#f4690c] rounded-3xl shadow-lg hover:shadow-2xl transition-all cursor-pointer group"
+              className="bg-white border-2 border-gray-100 hover:border-[#f4690c] rounded-3xl shadow-lg hover:shadow-2xl transition-all group"
             >
               <CardContent className="p-8 flex flex-col h-full justify-between gap-6">
                 <div className="flex justify-between items-start">
