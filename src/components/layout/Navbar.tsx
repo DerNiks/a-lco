@@ -52,7 +52,7 @@ export const Navbar = () => {
           {/* TOMBOL BENDERA (DI SAMPING NAVBAR, DI LUAR PILL) */}
           <button
             onClick={toggleLanguage}
-            className="w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow-lg hover:scale-105 transition-transform flex-shrink-0 cursor-pointer"
+            className="w-12 h-8 overflow-hidden shadow-lg hover:scale-105 transition-transform shrink-0 cursor-pointer"
             title={
               language === "en" ? "Switch to Chinese" : "Switch to English"
             }
