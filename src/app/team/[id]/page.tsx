@@ -1,28 +1,31 @@
+"use client";
+
+import React from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import Image from "next/image";
-import Link from "next/link"; // Import Link
-import { Button } from "@/components/ui/button"; // Import Button
-import { ArrowLeft } from "lucide-react"; // Import Icon
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 import { teamMembers } from "@/data/team";
-import { notFound } from "next/navigation";
+import { notFound, useParams } from "next/navigation";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/data/translations";
 
-export async function generateStaticParams() {
-  return teamMembers.map((member) => ({
-    id: member.id,
-  }));
-}
+export default function TeamDetailPage() {
+  const params = useParams();
+  const { id } = params;
+  const { language } = useLanguage();
+  const t = translations[language].team;
 
-interface PageProps {
-  params: Promise<{ id: string }>;
-}
-
-export default async function TeamDetailPage({ params }: PageProps) {
-  const { id } = await params;
   const member = teamMembers.find((m) => m.id === id);
 
   if (!member) {
-    notFound();
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        Member Not Found
+      </div>
+    );
   }
 
   return (
@@ -31,20 +34,19 @@ export default async function TeamDetailPage({ params }: PageProps) {
 
       <main className="flex-grow pt-40 pb-20 px-6">
         <div className="container mx-auto max-w-6xl">
-          {/* TOMBOL KEMBALI */}
           <div className="mb-10">
             <Link href="/team">
               <Button
                 variant="ghost"
                 className="gap-2 text-[#102a3b] hover:text-[#f4690c] p-0 text-lg font-sans"
               >
-                <ArrowLeft className="w-6 h-6" /> Back to All Team
+                <ArrowLeft className="w-6 h-6" /> {t.backToAll}
               </Button>
             </Link>
           </div>
 
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
-            {/* BAGIAN KIRI: FOTO */}
+            {/* FOTO */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
               <div className="relative w-full aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
                 <Image
@@ -57,28 +59,31 @@ export default async function TeamDetailPage({ params }: PageProps) {
               </div>
             </div>
 
-            {/* BAGIAN KANAN: DETAIL INFO */}
+            {/* DETAIL */}
             <div className="w-full lg:w-2/3 flex flex-col gap-8">
               <div>
                 <h1 className="font-serif text-[#f4690c] text-6xl md:text-8xl leading-tight mb-2">
                   {member.name}
                 </h1>
+                {/* Title: Akses via [language] */}
                 <p className="font-sans text-[#102a3b] text-2xl md:text-3xl font-medium">
-                  {member.title}
+                  {member.title[language]}
                 </p>
                 <div className="w-full h-1 bg-gray-200 mt-6 rounded-full" />
               </div>
 
+              {/* Bio: Akses via [language] */}
               <p className="font-sans text-gray-600 text-lg leading-relaxed">
-                {member.bio}
+                {member.bio[language]}
               </p>
 
+              {/* Practice Areas */}
               <div className="space-y-4">
                 <h3 className="font-serif text-[#102a3b] text-3xl md:text-4xl">
-                  Practice Areas
+                  {t.practiceAreas}
                 </h3>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-4">
-                  {member.practiceAreas?.map((area, index) => (
+                  {member.practiceAreas[language]?.map((area, index) => (
                     <li
                       key={index}
                       className="flex items-start gap-3 font-sans text-gray-600 text-lg"
@@ -90,12 +95,13 @@ export default async function TeamDetailPage({ params }: PageProps) {
                 </ul>
               </div>
 
+              {/* Education */}
               <div className="space-y-4">
                 <h3 className="font-serif text-[#102a3b] text-3xl md:text-4xl">
-                  Education
+                  {t.education}
                 </h3>
                 <ul className="space-y-2">
-                  {member.education?.map((edu, index) => (
+                  {member.education[language]?.map((edu, index) => (
                     <li
                       key={index}
                       className="font-sans text-gray-600 text-lg pl-5 border-l-4 border-[#f4690c]/30"
@@ -106,24 +112,25 @@ export default async function TeamDetailPage({ params }: PageProps) {
                 </ul>
               </div>
 
-              {/* Tampilkan Affiliation hanya jika datanya ada */}
-              {member.affiliations && member.affiliations.length > 0 && (
-                <div className="space-y-4">
-                  <h3 className="font-serif text-[#102a3b] text-3xl md:text-4xl">
-                    Professional Affiliation
-                  </h3>
-                  <ul className="space-y-2">
-                    {member.affiliations.map((aff, index) => (
-                      <li
-                        key={index}
-                        className="font-sans text-gray-600 text-lg pl-5 border-l-4 border-[#102a3b]/30"
-                      >
-                        {aff}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+              {/* Affiliation */}
+              {member.affiliations[language] &&
+                member.affiliations[language].length > 0 && (
+                  <div className="space-y-4">
+                    <h3 className="font-serif text-[#102a3b] text-3xl md:text-4xl">
+                      {t.affiliation}
+                    </h3>
+                    <ul className="space-y-2">
+                      {member.affiliations[language].map((aff, index) => (
+                        <li
+                          key={index}
+                          className="font-sans text-gray-600 text-lg pl-5 border-l-4 border-[#102a3b]/30"
+                        >
+                          {aff}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
             </div>
           </div>
         </div>

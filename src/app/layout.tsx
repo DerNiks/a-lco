@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Instrument_Serif, Montserrat } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/context/LanguageContext"; // Import Provider
 
-// Setup Font
 const instrumentSerif = Instrument_Serif({
   weight: ["400"],
   subsets: ["latin"],
@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${instrumentSerif.variable} ${montserrat.variable} antialiased bg-white`}
       >
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );
