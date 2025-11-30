@@ -10,7 +10,10 @@ export const ValuesSection = () => {
 
   return (
     <section id="about-us" className="container mx-auto px-6">
-      <h2 className="text-center text-white font-serif text-6xl md:text-8xl mb-16">
+      {/* PERBAIKAN WARNA JUDUL: */}
+      {/* text-[#102a3b]: Warna Biru di Mobile (agar kelihatan di background putih) */}
+      {/* lg:text-white: Warna Putih di Desktop (saat masuk area oranye) */}
+      <h2 className="text-center text-[#102a3b] lg:text-white font-serif text-6xl md:text-8xl mb-16">
         {t.prefix} <span className="italic">{t.title}</span>
       </h2>
 

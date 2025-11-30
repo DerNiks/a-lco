@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 import { ThumbsUp, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-import Link from "next/link"; 
-import { teamMembers } from "@/data/team"; 
+import Link from "next/link";
+import { teamMembers } from "@/data/team";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/data/translations";
 
@@ -15,24 +15,26 @@ export const TeamSection = () => {
   const t = translations[language].team;
 
   return (
-    <section 
-      id="our-team" 
+    <section
+      id="our-team"
       className="w-full py-24 px-6 bg-transparent scroll-mt-24"
     >
       <div className="container mx-auto flex flex-col items-center gap-16">
-        
-        <h2 className="text-center font-serif text-6xl md:text-8xl text-white">
-          {t.prefix} <span className="italic text-white">{t.title}</span>
+        <h2 className="text-center font-serif text-6xl md:text-8xl text-brand-blue lg:text-white">
+          {t.prefix}{" "}
+          <span className="italic text-brand-orange lg:text-white">
+            {t.title}
+          </span>
         </h2>
 
         <div className="flex flex-wrap justify-center gap-8 w-full">
           {featuredMembers.map((member) => (
-            <Link 
-              key={member.id} 
-              href={`/team/${member.id}`} 
+            <Link
+              key={member.id}
+              href={`/team/${member.id}`}
               className="w-full max-w-[350px] group block"
             >
-              <Card className="h-[500px] rounded-[2rem] overflow-hidden border-4 border-white shadow-2xl relative bg-white transition-transform duration-300 group-hover:-translate-y-2">
+              <Card className="h-[500px] rounded-4xl overflow-hidden border-4 border-white shadow-2xl relative bg-white transition-transform duration-300 group-hover:-translate-y-2">
                 <div className="absolute inset-0 bg-gray-200">
                   <Image
                     src={member.image}
@@ -53,7 +55,7 @@ export const TeamSection = () => {
                   </p>
                   <Button
                     size="icon"
-                    className="absolute top-[-20px] right-6 rounded-full bg-white text-brand-blue hover:bg-gray-100 shadow-lg w-12 h-12"
+                    className="absolute -top-5 right-6 rounded-full bg-white text-brand-blue hover:bg-gray-100 shadow-lg w-12 h-12"
                   >
                     <ArrowRight className="w-5 h-5" />
                   </Button>
@@ -63,9 +65,9 @@ export const TeamSection = () => {
           ))}
 
           <Link href="/team" className="w-full max-w-[350px] block">
-            <Card className="h-[500px] rounded-[2rem] border-4 border-brand-orange bg-white shadow-xl flex flex-col items-center justify-center gap-6 cursor-pointer transition-transform duration-300 hover:-translate-y-2 hover:bg-gray-50">
+            <Card className="h-[500px] rounded-4xl border-4 border-brand-orange bg-white shadow-xl flex flex-col items-center justify-center gap-6 cursor-pointer transition-transform duration-300 hover:-translate-y-2 hover:bg-gray-50">
               <div className="w-40 h-40 rounded-full bg-brand-orange flex items-center justify-center">
-                <ThumbsUp className="w-20 h-20 text-white" strokeWidth={1.5} />
+                <ArrowRight className="w-20 h-20 text-white" strokeWidth={1.5} />
               </div>
               <div className="text-center font-serif text-brand-orange text-5xl leading-none">
                 <span className="italic block text-3xl mb-2">{t.see}</span>

@@ -31,7 +31,6 @@ export default function RootLayout({
         className={`${instrumentSerif.variable} ${montserrat.variable} antialiased bg-gray-100`}
       >
         <LanguageProvider>
-          {/* PERBAIKAN: Wrapper Global untuk membatasi lebar maksimal saat zoom out */}
           <div className="w-full max-w-[1920px] mx-auto bg-white shadow-2xl min-h-screen relative overflow-x-hidden">
             {children}
           </div>

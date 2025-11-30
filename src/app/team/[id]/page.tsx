@@ -32,7 +32,7 @@ export default function TeamDetailPage() {
     <div className="flex flex-col w-full min-h-screen bg-white">
       <Navbar />
 
-      <main className="flex-grow pt-40 pb-20 px-6">
+      <main className="grow pt-40 pb-20 px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="mb-10">
             <Link href="/team">
@@ -46,9 +46,8 @@ export default function TeamDetailPage() {
           </div>
 
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
-            {/* FOTO */}
-            <div className="w-full lg:w-1/3 flex-shrink-0">
-              <div className="relative w-full aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
+            <div className="w-full lg:w-1/3 shrink-0">
+              <div className="relative w-full aspect-3/4 rounded-4xl overflow-hidden shadow-2xl border-4 border-white">
                 <Image
                   src={member.image}
                   alt={member.name}
@@ -59,25 +58,21 @@ export default function TeamDetailPage() {
               </div>
             </div>
 
-            {/* DETAIL */}
             <div className="w-full lg:w-2/3 flex flex-col gap-8">
               <div>
                 <h1 className="font-serif text-[#f4690c] text-6xl md:text-8xl leading-tight mb-2">
                   {member.name}
                 </h1>
-                {/* Title: Akses via [language] */}
                 <p className="font-sans text-[#102a3b] text-2xl md:text-3xl font-medium">
                   {member.title[language]}
                 </p>
                 <div className="w-full h-1 bg-gray-200 mt-6 rounded-full" />
               </div>
 
-              {/* Bio: Akses via [language] */}
               <p className="font-sans text-gray-600 text-lg leading-relaxed">
                 {member.bio[language]}
               </p>
 
-              {/* Practice Areas */}
               <div className="space-y-4">
                 <h3 className="font-serif text-[#102a3b] text-3xl md:text-4xl">
                   {t.practiceAreas}
@@ -88,7 +83,7 @@ export default function TeamDetailPage() {
                       key={index}
                       className="flex items-start gap-3 font-sans text-gray-600 text-lg"
                     >
-                      <span className="text-[#f4690c] mt-1.5 w-2 h-2 rounded-full bg-[#f4690c] flex-shrink-0" />
+                      <span className="text-[#f4690c] mt-1.5 w-2 h-2 rounded-full bg-[#f4690c] shrink-0" />
                       {area}
                     </li>
                   ))}
@@ -111,26 +106,6 @@ export default function TeamDetailPage() {
                   ))}
                 </ul>
               </div>
-
-              {/* Affiliation */}
-              {member.affiliations[language] &&
-                member.affiliations[language].length > 0 && (
-                  <div className="space-y-4">
-                    <h3 className="font-serif text-[#102a3b] text-3xl md:text-4xl">
-                      {t.affiliation}
-                    </h3>
-                    <ul className="space-y-2">
-                      {member.affiliations[language].map((aff, index) => (
-                        <li
-                          key={index}
-                          className="font-sans text-gray-600 text-lg pl-5 border-l-4 border-[#102a3b]/30"
-                        >
-                          {aff}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
             </div>
           </div>
         </div>

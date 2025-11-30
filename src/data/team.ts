@@ -1,15 +1,12 @@
-// src/data/team.ts
-
 export interface TeamMember {
   id: string;
   name: string;
-  title: { en: string; cn: string }; // Bilingual Title
+  title: { en: string; cn: string };
   image: string;
   bgColor: string;
-  bio: { en: string; cn: string }; // Bilingual Bio
+  bio: { en: string; cn: string };
   practiceAreas: { en: string[]; cn: string[] };
   education: { en: string[]; cn: string[] };
-  affiliations: { en: string[]; cn: string[] };
 }
 
 export const teamMembers: TeamMember[] = [
@@ -36,16 +33,6 @@ export const teamMembers: TeamMember[] = [
       en: ["Bachelor of Laws (S.H.)", "Master of Notary (M.Kn.)"],
       cn: ["法学学士 (S.H.)", "公证硕士 (M.Kn.)"],
     },
-    affiliations: {
-      en: [
-        "Indonesian Bar Association (PERADI)",
-        "Indonesian Association of Receivers and Administrators (AKPI)",
-      ],
-      cn: [
-        "印度尼西亚律师协会 (PERADI)",
-        "印度尼西亚接收人与管理人协会 (AKPI)",
-      ],
-    },
   },
   {
     id: "joni-zhang",
@@ -69,10 +56,6 @@ export const teamMembers: TeamMember[] = [
       ],
       cn: ["应用科学学士 (S.S.T.)", "文学硕士 (M.A)", "法学学士 (候选人)"],
     },
-    affiliations: {
-      en: ["Certified Tax Consultant"],
-      cn: ["注册税务顾问"],
-    },
   },
   {
     id: "dedy-febriyanto-thang",
@@ -92,10 +75,6 @@ export const teamMembers: TeamMember[] = [
       en: ["Bachelor of Laws (S.H.)"],
       cn: ["法学学士 (S.H.)"],
     },
-    affiliations: {
-      en: ["Indonesian Bar Association (PERADI)"],
-      cn: ["印度尼西亚律师协会 (PERADI)"],
-    },
   },
   {
     id: "zoey",
@@ -114,10 +93,6 @@ export const teamMembers: TeamMember[] = [
     education: {
       en: ["Bachelor of Laws (S.H.)"],
       cn: ["法学学士 (S.H.)"],
-    },
-    affiliations: {
-      en: ["Indonesian Bar Association (PERADI)"],
-      cn: ["印度尼西亚律师协会 (PERADI)"],
     },
   },
   {
@@ -145,10 +120,6 @@ export const teamMembers: TeamMember[] = [
     education: {
       en: ["Bachelor of Laws (S.H.)"],
       cn: ["法学学士 (S.H.)"],
-    },
-    affiliations: {
-      en: ["Indonesian Bar Association (PERADI)"],
-      cn: ["印度尼西亚律师协会 (PERADI)"],
     },
   },
   {
@@ -182,10 +153,6 @@ export const teamMembers: TeamMember[] = [
         "印度尼西亚伊斯兰大学(日惹校区)法学硕士",
       ],
     },
-    affiliations: {
-      en: ["Indonesian Bar Association (PERADI)"],
-      cn: ["印度尼西亚律师协会 (PERADI)"],
-    },
   },
   {
     id: "syahman-pangihutan-haloho",
@@ -210,10 +177,6 @@ export const teamMembers: TeamMember[] = [
       en: ["Bachelor of Laws (S.H)"],
       cn: ["法学学士 (S.H)"],
     },
-    affiliations: {
-      en: ["Indonesian Bar Association (PERADI)"],
-      cn: ["印度尼西亚律师协会 (PERADI)"],
-    },
   },
   {
     id: "stanley-lee",
@@ -232,10 +195,6 @@ export const teamMembers: TeamMember[] = [
     education: {
       en: ["Bachelor of Laws (S.H.) Candidate"],
       cn: ["法学学士 (S.H.) 候选人"],
-    },
-    affiliations: {
-      en: [],
-      cn: [],
     },
   },
 ];
