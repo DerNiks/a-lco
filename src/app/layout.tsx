@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Instrument_Serif, Montserrat } from "next/font/google";
 import "./globals.css";
-import { LanguageProvider } from "@/context/LanguageContext"; // Import Provider
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const instrumentSerif = Instrument_Serif({
   weight: ["400"],
@@ -28,9 +28,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${instrumentSerif.variable} ${montserrat.variable} antialiased bg-white`}
+        className={`${instrumentSerif.variable} ${montserrat.variable} antialiased bg-gray-100`}
       >
-        <LanguageProvider>{children}</LanguageProvider>
+        <LanguageProvider>
+          {/* PERBAIKAN: Wrapper Global untuk membatasi lebar maksimal saat zoom out */}
+          <div className="w-full max-w-[1920px] mx-auto bg-white shadow-2xl min-h-screen relative overflow-x-hidden">
+            {children}
+          </div>
+        </LanguageProvider>
       </body>
     </html>
   );
