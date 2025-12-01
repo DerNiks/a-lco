@@ -58,44 +58,6 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
-    id: "dedy-febriyanto-thang",
-    name: "Dedy Febriyanto Thang (曾财光)",
-    title: { en: "Senior Partner", cn: "资深合伙人" },
-    image: "/dedy.jpg",
-    bgColor: "bg-brand-blue",
-    bio: {
-      en: "He is an expert in business law and corporate law with a broad practical experience in handling foreign direct investment companies in Indonesia.",
-      cn: "他是商法和公司法方面的专家，在处理印度尼西亚的外国直接投资公司方面拥有丰富的实践经验。",
-    },
-    practiceAreas: {
-      en: ["Business Law", "Corporate Law", "Foreign Direct Investment"],
-      cn: ["商业法", "公司法", "外国直接投资"],
-    },
-    education: {
-      en: ["Bachelor of Laws (S.H.)"],
-      cn: ["法学学士 (S.H.)"],
-    },
-  },
-  {
-    id: "zoey",
-    name: "Zoey",
-    title: { en: "Senior Partner", cn: "资深合伙人" },
-    image: "/zoey.jpg",
-    bgColor: "bg-brand-blue",
-    bio: {
-      en: "Expert in business law, notarial law, and contract law. A qualified lawyer dedicated to providing excellent legal services.",
-      cn: "他是商业法、公证法和合同法方面的专家。他是一名副教授和合格律师，目前还在为担任公证员进行实习。",
-    },
-    practiceAreas: {
-      en: ["Business Law", "Contract Law", "Notarial Law"],
-      cn: ["商业法", "合同法", "公证法"],
-    },
-    education: {
-      en: ["Bachelor of Laws (S.H.)"],
-      cn: ["法学学士 (S.H.)"],
-    },
-  },
-  {
     id: "eko-kurniawan",
     name: "Eko Kurniawan",
     title: {
@@ -120,6 +82,44 @@ export const teamMembers: TeamMember[] = [
     education: {
       en: ["Bachelor of Laws (S.H.)"],
       cn: ["法学学士 (S.H.)"],
+    },
+  },
+  {
+    id: "dedy-febriyanto-thang",
+    name: "Dedy Febriyanto Thang (曾财光)",
+    title: { en: "Senior Partner", cn: "资深合伙人" },
+    image: "/dedy.jpg",
+    bgColor: "bg-brand-blue",
+    bio: {
+      en: "He is an expert in business law and corporate law with a broad practical experience in handling foreign direct investment companies in Indonesia.",
+      cn: "他是商法和公司法方面的专家，在处理印度尼西亚的外国直接投资公司方面拥有丰富的实践经验。",
+    },
+    practiceAreas: {
+      en: ["Business Law", "Corporate Law", "Foreign Direct Investment"],
+      cn: ["商业法", "公司法", "外国直接投资"],
+    },
+    education: {
+      en: ["Bachelor of Laws (S.H.)"],
+      cn: ["法学学士 (S.H.)"],
+    },
+  },
+  {
+    id: "stanley-lee",
+    name: "Stanley Lee (李政偉)",
+    title: { en: "Paralegal", cn: "律师助理" },
+    image: "/stanley.jpg",
+    bgColor: "bg-brand-blue",
+    bio: {
+      en: "He is highly skilled and proficient in the administration of law in matters of litigation and non-litigation. Apart from being responsible, he is also very thorough with documents.",
+      cn: "他在诉讼和非诉讼事务方面具有高超的技能，精通法律。除了认真负责，他对文件的处理也非常周全。",
+    },
+    practiceAreas: {
+      en: ["Legal Administration", "Litigation Support", "Document Review"],
+      cn: ["法律行政", "诉讼支持", "文件审查"],
+    },
+    education: {
+      en: ["Bachelor of Laws (S.H.) Candidate"],
+      cn: ["法学学士 (S.H.) 候选人"],
     },
   },
   {
@@ -179,22 +179,22 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
-    id: "stanley-lee",
-    name: "Stanley Lee (李政偉)",
-    title: { en: "Paralegal", cn: "律师助理" },
-    image: "/stanley.jpg",
+    id: "zoey",
+    name: "Zoey",
+    title: { en: "Admin", cn: "行政" },
+    image: "/zoey.jpg",
     bgColor: "bg-brand-blue",
     bio: {
-      en: "He is highly skilled and proficient in the administration of law in matters of litigation and non-litigation. Apart from being responsible, he is also very thorough with documents.",
-      cn: "他在诉讼和非诉讼事务方面具有高超的技能，精通法律。除了认真负责，他对文件的处理也非常周全。",
+      en: "Expert in business law, notarial law, and contract law. A qualified lawyer dedicated to providing excellent legal services.",
+      cn: "他是商业法、公证法和合同法方面的专家。他是一名副教授和合格律师，目前还在为担任公证员进行实习。",
     },
     practiceAreas: {
-      en: ["Legal Administration", "Litigation Support", "Document Review"],
-      cn: ["法律行政", "诉讼支持", "文件审查"],
+      en: ["Business Law", "Contract Law", "Notarial Law"],
+      cn: ["商业法", "合同法", "公证法"],
     },
     education: {
-      en: ["Bachelor of Laws (S.H.) Candidate"],
-      cn: ["法学学士 (S.H.) 候选人"],
+      en: ["Bachelor of Laws (S.H.)"],
+      cn: ["法学学士 (S.H.)"],
     },
   },
 ];
