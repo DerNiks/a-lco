@@ -43,7 +43,7 @@ export async function submitContactForm(prevState: any, formData: FormData) {
 
     await transporter.sendMail({
       from: `"A-LCO Website" <${process.env.EMAIL_USER}>`,
-      to: "derricksu1818@gmail.com",
+      to: "antoniyeooffice@gmail.com",
       replyTo: email,
       subject: `New Inquiry from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
