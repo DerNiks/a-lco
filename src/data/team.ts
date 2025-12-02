@@ -1,6 +1,7 @@
 export interface TeamMember {
   id: string;
   name: string;
+  cname: string;
   title: { en: string; cn: string };
   image: string;
   bgColor: string;
@@ -12,7 +13,8 @@ export interface TeamMember {
 export const teamMembers: TeamMember[] = [
   {
     id: "antoni-yeo",
-    name: "Antoni Yeo (杨亜興)",
+    name: "Antoni Yeo S.H., M.Kn",
+    cname: "(杨桠兴)",
     title: { en: "Founder & President", cn: "创始人兼总裁" },
     image: "/anthony.jpg",
     bgColor: "bg-brand-orange",
@@ -36,7 +38,8 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "joni-zhang",
-    name: "Joni Zhang (张明俊)",
+    name: "Joni Zhang, S.S.T., M.A., BKP",
+    cname: "(张明俊)",
     title: { en: "Co-Founder & Associate", cn: "联合创始人兼副总裁" },
     image: "/joni.png",
     bgColor: "bg-brand-orange",
@@ -59,7 +62,8 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "eko-kurniawan",
-    name: "Eko Kurniawan",
+    name: "Eko Kurniawan S.H., M.H",
+    cname: "(埃科)",
     title: {
       en: "Senior Partner, Lawyer, Legal Consultant",
       cn: "资深合伙人, 律师及法律顾问",
@@ -86,7 +90,8 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "dedy-febriyanto-thang",
-    name: "Dedy Febriyanto Thang (曾财光)",
+    name: "Deddy Febriyanto Tjhang S.H",
+    cname: "(曾财光)",
     title: { en: "Senior Partner", cn: "资深合伙人" },
     image: "/dedy.jpg",
     bgColor: "bg-brand-blue",
@@ -105,7 +110,8 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "stanley-lee",
-    name: "Stanley Lee (李政偉)",
+    name: "Stanley Lee",
+    cname: "(李政偉)",
     title: { en: "Paralegal", cn: "律师助理" },
     image: "/stanley.jpg",
     bgColor: "bg-brand-blue",
@@ -124,7 +130,8 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "haris-padli",
-    name: "Haris Padli",
+    name: "Haris Padli S.H., M.H",
+    cname: "(哈里斯)",
     title: { en: "Lawyer, Legal Consultant", cn: "律师及法律顾问" },
     image: "/padli.jpg",
     bgColor: "bg-brand-blue",
@@ -156,7 +163,8 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "syahman-pangihutan-haloho",
-    name: "Syahman Pangihutan Haloho",
+    name: "Syahman Pangihutan Haloho S.H",
+    cname: "(夏曼)",
     title: { en: "Lawyer, Legal Consultant", cn: "律师及法律顾问" },
     image: "/syahman.jpg",
     bgColor: "bg-brand-blue",
@@ -180,7 +188,8 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "zoey",
-    name: "Zoey",
+    name: "Zoeys",
+    cname: "(史恩嘉)",
     title: { en: "Admin", cn: "行政" },
     image: "/zoey.jpg",
     bgColor: "bg-brand-blue",

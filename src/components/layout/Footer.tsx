@@ -24,8 +24,8 @@ export const Footer = () => {
     <footer className="bg-[#102a3b] text-white overflow-hidden relative -mt-10 z-30">
       <div className="container mx-auto px-6 py-16 md:py-10 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
-          <div className="lg:col-span-4 flex flex-col gap-6">
-            <Link href="/" className="relative w-32 h-32 mb-4 block">
+          <div className="lg:col-span-4 flex flex-col">
+            <Link href="/" className="relative w-32 h-32 mb-2 block">
               <Image
                 src="/logo.svg"
                 alt="A-LCO Logo"
@@ -70,7 +70,7 @@ export const Footer = () => {
             </ul>
           </div>
 
-          <div className="lg:col-span-4 flex flex-col gap-6">
+          <div className="lg:col-span-4 flex flex-col gap-4">
             <h3 className="font-serif text-2xl mb-2 text-[#f4690c]">
               {t.contact}
             </h3>

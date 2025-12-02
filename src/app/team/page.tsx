@@ -59,6 +59,9 @@ export default function TeamPage() {
                     <h3 className="font-serif text-white text-3xl leading-none">
                       {member.name}
                     </h3>
+                    <h3 className="font-serif text-white text-3xl leading-none">
+                      {member.cname}
+                    </h3>
                     {/* Mengakses title dengan [language] agar sesuai data bilingual */}
                     <p className="font-sans text-white/90 text-base">
                       {member.title[language]}

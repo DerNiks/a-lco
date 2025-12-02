@@ -60,9 +60,12 @@ export default function TeamDetailPage() {
 
             <div className="w-full lg:w-2/3 flex flex-col gap-8">
               <div>
-                <h1 className="font-serif text-[#f4690c] text-6xl md:text-8xl leading-tight mb-2">
+                <h1 className="font-serif text-[#f4690c] text-6xl md:text-6xl leading-tight mb-2">
                   {member.name}
                 </h1>
+                <h2 className="font-serif text-[#f4690c] text-5xl md:text-5xl leading-tight mb-2">
+                  {member.cname}
+                </h2>
                 <p className="font-sans text-[#102a3b] text-2xl md:text-3xl font-medium">
                   {member.title[language]}
                 </p>

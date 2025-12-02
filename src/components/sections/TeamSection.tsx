@@ -50,6 +50,9 @@ export const TeamSection = () => {
                   <h3 className="font-serif text-white text-4xl leading-none">
                     {member.name}
                   </h3>
+                  <h4 className="font-serif text-white text-3xl leading-none">
+                    {member.cname}
+                  </h4>
                   <p className="font-sans text-white/90 text-lg">
                     {member.title[language]}
                   </p>
@@ -67,7 +70,10 @@ export const TeamSection = () => {
           <Link href="/team" className="w-full max-w-[350px] block">
             <Card className="h-[500px] rounded-4xl border-4 border-brand-orange bg-white shadow-xl flex flex-col items-center justify-center gap-6 cursor-pointer transition-transform duration-300 hover:-translate-y-2 hover:bg-gray-50">
               <div className="w-40 h-40 rounded-full bg-brand-orange flex items-center justify-center">
-                <ArrowRight className="w-20 h-20 text-white" strokeWidth={1.5} />
+                <ArrowRight
+                  className="w-20 h-20 text-white"
+                  strokeWidth={1.5}
+                />
               </div>
               <div className="text-center font-serif text-brand-orange text-5xl leading-none">
                 <span className="italic block text-3xl mb-2">{t.see}</span>
