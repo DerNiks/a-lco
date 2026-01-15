@@ -19,7 +19,7 @@ export default function TeamPage() {
     <div className="flex flex-col w-full min-h-screen bg-white">
       <Navbar />
 
-      <main className="flex-grow pt-40 pb-20 px-6">
+      <main className="grow pt-40 pb-20 px-6">
         <div className="container mx-auto flex flex-col items-center gap-10">
           <div className="w-full max-w-[1400px] flex justify-start">
             <Link href="/#our-team">

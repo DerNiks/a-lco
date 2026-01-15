@@ -88,7 +88,7 @@ export const Footer = () => {
                 +62 811 6666 676 (WhatsApp)
               </a>
             </div>
-            <div className="flex items-center gap-4 mt-4">
+            <div className="flex items-center gap-4 mt-4 mb-5">
               <Image
                 src="/wechat.png"
                 alt="WeChat"

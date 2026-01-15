@@ -3,20 +3,22 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react"; // Import useState
+import React, { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/data/translations";
-import { Menu, X } from "lucide-react"; // Import Icon Menu & Close
+import { Menu, X } from "lucide-react";
 
 export const Navbar = () => {
   const { language, toggleLanguage } = useLanguage();
   const t = translations[language].navbar;
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // State untuk menu mobile
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: t.about, href: "/#about-us" },
-    { name: t.team, href: "/#our-team" },
-    { name: t.practice, href: "/#practice-area" },
+    { name: t.about, href: "/" },
+    { name: t.team, href: "/team" },
+    // { name: t.practice, href: "/#practice-area" },
+    { name: t.news, href: "/news" },
+    { name: t.gallery, href: "/gallery" },
     { name: t.clients, href: "/#our-client" },
     { name: t.contact, href: "/#contact-us" },
   ];

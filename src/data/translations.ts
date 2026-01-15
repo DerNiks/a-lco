@@ -1,4 +1,3 @@
-// src/data/translations.ts
 export const translations = {
   en: {
     navbar: {
@@ -7,6 +6,8 @@ export const translations = {
       practice: "Practice Area",
       clients: "Our Clients",
       contact: "Contact Us",
+      gallery: "Gallery",
+      news: "News",
     },
     hero: {
       title1: "A Boutique Law Firm For",
@@ -121,6 +122,8 @@ export const translations = {
       practice: "专业领域",
       clients: "客户",
       contact: "联系我们",
+      gallery: "画廊",
+      news: "新闻",
     },
     hero: {
       title1: "满足您需求的",
